@@ -29,6 +29,13 @@ module Pollster
       self.create invoke("charts/#{slug}")
     end
 
+    def self.where(params={})
+      if params.empty?
+        raise "A search parameter is required"
+      end
+      invoke('charts', params).map { |chart| self.create(chart) }
+    end
+
   end
 
 end
