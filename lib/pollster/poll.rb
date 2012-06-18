@@ -2,7 +2,7 @@ module Pollster
 
   class Poll < Base
 
-    attr_reader :sdate, :edate, :mode, :pollster, :questions
+    attr_reader :start_date, :end_date, :mode, :pollster, :questions
 
     def initialize(params={})
       params.each_pair do |k,v|
@@ -18,6 +18,8 @@ module Pollster
 
       def self.create(data)
         data = Hash[*data.map { |k, v| [k.to_sym, v] }.flatten(1)]
+        data[:start_date] = Date.parse(data[:sdate])
+        data[:end_date] = Date.parse(data[:edate])
         self.new(data)
       end
 
