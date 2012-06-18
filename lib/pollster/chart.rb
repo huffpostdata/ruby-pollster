@@ -10,6 +10,14 @@ module Pollster
       end
     end
 
+    def to_s
+      "#{self.class}: #{self.title}"
+    end
+
+    def inspect
+      "<#{self.class}: #{self.title}>"
+    end
+
     # Get a list of polls for this chart.
     def polls
       Poll.by_chart(self.slug)
