@@ -5,6 +5,8 @@ require 'pollster/version'
 Gem::Specification.new do |s|
   s.name = 'pollster-ruby'
   s.version = Pollster::VERSION
+  s.platform = Gem::Platform::RUBY
+  s.authors = ["Jay Boice", "Aaron Bycoffe"]
   s.summary = "Ruby library for accessing the Pollster API"
   s.description = "A Ruby library for accessing the Pollster API."
 
