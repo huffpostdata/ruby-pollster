@@ -1,7 +1,7 @@
 pollster-ruby
 =============
 
-A Ruby wrapper for the Pollster API.
+A Ruby wrapper for the [Pollster API](http://elections.huffingtonpost.com/pollster/api).
 
 
 Usage
