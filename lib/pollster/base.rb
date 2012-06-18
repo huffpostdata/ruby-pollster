@@ -16,7 +16,6 @@ module Pollster
 
       def invoke(path, params={})
         uri = build_request_url(path, params)
-        p uri
         response = uri.read
         JSON.parse(response)
       end
