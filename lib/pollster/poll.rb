@@ -10,6 +10,13 @@ module Pollster
       end
     end
 
+    # Get a list of all polls.
+    # Polls are listed in pages of 25.
+    def self.all(page=1)
+      invoke('polls', {:page => page}).map { |poll| self.create(poll) }
+    end
+
+    # Get a list of polls for a chart.
     def self.by_chart(chart_slug)
       invoke('polls', {:chart => chart_slug}).map { |poll| self.create(poll) }
     end

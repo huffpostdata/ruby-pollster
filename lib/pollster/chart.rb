@@ -15,14 +15,18 @@ module Pollster
       Poll.by_chart(self.slug)
     end
 
+    # Get a list of all charts.
     def self.all
       invoke('charts').map { |chart| self.create(chart) }
     end
 
+    # Get a chart based on its slug.
     def self.find(slug)
       self.create invoke("charts/#{slug}")
     end
 
+    # Get a list of charts based on the given parameters.
+    # See API documentation for acceptable parameters.
     def self.where(params={})
       if params.empty?
         raise "A search parameter is required"
