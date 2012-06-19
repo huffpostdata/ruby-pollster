@@ -25,8 +25,8 @@ module Pollster
 
       def self.create(data)
         data = Hash[*data.map { |k, v| [k.to_sym, v] }.flatten(1)]
-        data[:start_date] = Date.parse(data[:sdate])
-        data[:end_date] = Date.parse(data[:edate])
+        data[:start_date] = Date.parse(data[:start_date])
+        data[:end_date] = Date.parse(data[:end_date])
         self.new(data)
       end
 
