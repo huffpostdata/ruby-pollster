@@ -3,7 +3,7 @@ $:.push File.expand_path("../lib", __FILE__)
 require 'pollster/version'
 
 Gem::Specification.new do |s|
-  s.name = 'pollster-ruby'
+  s.name = 'ruby-pollster'
   s.version = Pollster::VERSION
   s.platform = Gem::Platform::RUBY
   s.authors = ["Jay Boice", "Aaron Bycoffe"]
