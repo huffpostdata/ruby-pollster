@@ -12,7 +12,7 @@ module Pollster
 
     # Get a list of polls for this chart.
     def polls
-      Poll.by_chart(self.slug)
+      Poll.where(:chart => self.slug)
     end
 
     # Get a list of all charts.
