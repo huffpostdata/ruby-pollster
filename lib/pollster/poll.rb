@@ -2,7 +2,7 @@ module Pollster
 
   class Poll < Base
 
-    attr_reader :start_date, :end_date, :mode, :pollster, :questions
+    attr_reader :start_date, :end_date, :method, :pollster, :url, :source, :questions
 
     def initialize(params={})
       params.each_pair do |k,v|
