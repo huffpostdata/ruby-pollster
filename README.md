@@ -7,15 +7,19 @@ A Ruby wrapper for the [Pollster API](http://elections.huffingtonpost.com/pollst
 Usage
 -------------
 
+Require the Pollster package
+
     >> require 'pollster'
-    >> include Pollster
 
-    # List all charts
-    >> Chart.all
+List all charts
 
-    # Get a specific chart
-    >> Chart.find('2012-iowa-gop-primary')
+    >> Pollster::Chart.all
 
-    # List the polls for a specific chart
-    >> chart = Chart.find('2012-iowa-gop-primary')
+Get a specific chart
+
+    >> Pollster::Chart.find('2012-iowa-gop-primary')
+
+List the polls for a specific chart
+
+    >> chart = Pollster::Chart.find('2012-iowa-gop-primary')
     >> chart.polls
