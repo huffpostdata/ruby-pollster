@@ -7,6 +7,8 @@ Gem::Specification.new do |s|
   s.version = Pollster::VERSION
   s.platform = Gem::Platform::RUBY
   s.authors = ["Jay Boice", "Aaron Bycoffe"]
+  s.email = ["jay.boice@huffingtonpost.com", "bycoffe@huffingtonpost.com"]
+  s.homepage = "http://github.com/huffingtonpost/ruby-pollster"
   s.summary = "Ruby library for accessing the Pollster API"
   s.description = "A Ruby library for accessing the Pollster API."
 
