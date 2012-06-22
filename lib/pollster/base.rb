@@ -1,6 +1,8 @@
 require 'json'
-require 'open-uri'
 require 'uri'
+require 'net/http'
+require 'date'
+require 'time'
 
 module Pollster
 
@@ -13,13 +15,19 @@ module Pollster
       private
 
         def build_request_url(path, params={})
-          URI::HTTP.build :host => API_SERVER, :path => "#{API_BASE}/#{path}.json", :query => params.map { |k, v| "#{k}=#{v}" }.join('&')
+          uri = URI("http://#{API_SERVER}#{API_BASE}/#{path}")
+          uri.query = URI.encode_www_form(params)
+          uri
         end
 
         def invoke(path, params={})
           uri = build_request_url(path, params)
-          response = uri.read
-          JSON.parse(response)
+          response = Net::HTTP.get_response(uri)
+          body = response.header['Content-Encoding'].eql?('gzip') ?
+                 Zlib::GzipReader.new(StringIO.new(response.body)).read() :
+                 response.body
+          raise Exception, JSON.parse(body)["errors"].join(', ') if response.code.eql?('400')
+          JSON.parse(body)
         end
 
     end
