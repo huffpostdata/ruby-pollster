@@ -22,7 +22,9 @@ module Pollster
 
         def invoke(path, params={})
           uri = build_request_url(path, params)
-          response = Net::HTTP.get_response(uri)
+          request = Net::HTTP::Get.new(uri.request_uri)
+          request['Accept-Encoding'] = 'gzip,deflate'
+          response = Net::HTTP.start(uri.host, uri.port) { |http| http.request(request) }
           body = response.header['Content-Encoding'].eql?('gzip') ?
                  Zlib::GzipReader.new(StringIO.new(response.body)).read() :
                  response.body
