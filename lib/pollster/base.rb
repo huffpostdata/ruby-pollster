@@ -3,6 +3,7 @@ require 'uri'
 require 'net/http'
 require 'date'
 require 'time'
+require 'zlib'
 
 module Pollster
 
@@ -14,9 +15,12 @@ module Pollster
 
       private
 
+        def encode_params(params)
+          params.map { |k, v| "#{k}=#{v}" }.join('&')
+        end
+
         def build_request_url(path, params={})
-          uri = URI("http://#{API_SERVER}#{API_BASE}/#{path}")
-          uri.query = URI.encode_www_form(params)
+          uri = URI("http://#{API_SERVER}#{API_BASE}/#{path}?#{encode_params(params)}")
           uri
         end
 
