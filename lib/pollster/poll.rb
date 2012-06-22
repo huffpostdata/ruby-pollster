@@ -1,5 +1,3 @@
-require 'date'
-
 module Pollster
 
   class Poll < Base
