@@ -12,4 +12,8 @@ class PollsterTest < Test::Unit::TestCase
     assert_equal 10, Poll.all.size
   end
 
+  def test_invalid_chart_slug
+    assert_raise(Exception) { Chart.find('invalid-slug') }
+  end
+
 end
