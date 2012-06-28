@@ -20,8 +20,7 @@ module Pollster
         end
 
         def build_request_url(path, params={})
-          uri = URI("http://#{API_SERVER}#{API_BASE}/#{path}?#{encode_params(params)}")
-          uri
+          URI("http://#{API_SERVER}#{API_BASE}/#{path}#{params.size > 0 ? "?#{encode_params(params)}" : ''}")
         end
 
         def invoke(path, params={})
