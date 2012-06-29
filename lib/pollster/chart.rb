@@ -43,9 +43,7 @@ module Pollster
     end
 
     def estimates_by_date
-      return @estimates_by_date unless @estimates_by_date.nil?
-      chart = Pollster::Chart.find(slug)
-      @estimates_by_date = chart.estimates_by_date
+      @estimates_by_date ||= Pollster::Chart.find(slug).estimates_by_date
     end
 
     private
