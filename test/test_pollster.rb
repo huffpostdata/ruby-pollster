@@ -16,4 +16,11 @@ class PollsterTest < Test::Unit::TestCase
     assert_raise(Exception) { Chart.find('invalid-slug') }
   end
 
+  def test_estimates_by_date
+    assert_block do
+      chart = Chart.all.first
+      chart.estimates_by_date.is_a?(Array)
+    end
+  end
+
 end
