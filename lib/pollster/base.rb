@@ -36,6 +36,10 @@ module Pollster
           JSON.parse(body)
         end
 
+        def hash_keys_to_sym(hash)
+          Hash[*hash.map { |k, v| [k.to_sym, v] }.flatten(1)]
+        end
+
     end
   end
 

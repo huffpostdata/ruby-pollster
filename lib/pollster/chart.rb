@@ -2,7 +2,7 @@ module Pollster
 
   class Chart < Base
 
-    attr_reader :title, :slug, :poll_count, :last_updated, :url, :estimates, :state, :topic
+    attr_reader :title, :slug, :poll_count, :last_updated, :url, :estimates, :estimates_by_date, :state, :topic
 
     def initialize(params={})
       params.each_pair do |k,v|
@@ -43,10 +43,17 @@ module Pollster
     end
 
     private
+
       def self.create(data)
         data = Hash[*data.map { |k, v| [k.to_sym, v] }.flatten(1)]
         data[:last_updated] = Time.parse(data[:last_updated])
         data[:estimates].map! { |estimate| {:choice => estimate['choice'], :value => estimate['value']} }
+        data[:estimates_by_date] = data[:estimates_by_dates].map do |x|
+          estimate = hash_keys_to_sym(x)
+          estimate[:date] = Date.parse(estimate[:date])
+          estimate[:estimates] = estimate[:estimates].map { |e| hash_keys_to_sym(e) }
+          estimate
+        end
         self.new(data)
       end
 
