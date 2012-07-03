@@ -130,3 +130,14 @@ You may also list all polls available through Pollster:
 This response is paginated, with 10 polls per page. To access subsequent pages, provide a page argument:
 
     >> Pollster::Poll.all(page=5)
+
+
+## Authors
+
+Aaron Bycoffe, bycoffe@huffingtonpost.com
+
+Jay Boice, jayb@huffingtonpost.com
+
+## Copyright
+
+Copyright © 2012 The Huffington Post. See LICENSE for details.
