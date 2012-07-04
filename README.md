@@ -8,7 +8,7 @@
                                                                                                     - - - - - - - - - - - 
   
 
-A Ruby wrapper for the [HuffPost Pollster API](http://elections.huffingtonpost.com/pollster/api) 
+A Ruby wrapper for the [Pollster API](http://elections.huffingtonpost.com/pollster/api) 
 which provides access to political opinion polling data and trend estimates from The Huffington Post.
 
 The Pollster gem has been tested under Ruby 1.8.7, 1.9.2 and 1.9.3.
