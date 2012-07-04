@@ -15,7 +15,7 @@ The Pollster gem has been tested under Ruby 1.8.7, 1.9.2 and 1.9.3.
 
 ## Installation
 
-  gem install pollster
+    gem install pollster
 
 ## Usage Examples
 
