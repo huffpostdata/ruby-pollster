@@ -53,7 +53,7 @@ Pollster provides two classes:
 
     Pollster::Chart
 
-represents the current estimates for a Pollster chart (e.g. [Romney vs. Obama](http://elections.huffingtonpost.com/pollster/2012-general-election-romney-vs-obama)
+represents the current estimates for a Pollster chart (e.g. [Romney vs. Obama](http://elections.huffingtonpost.com/pollster/2012-general-election-romney-vs-obama))
 
     Pollster::Poll
 
@@ -138,7 +138,7 @@ This response is paginated, with 10 polls per page. To access subsequent pages, 
 ## Authors
 
 - Aaron Bycoffe, bycoffe@huffingtonpost.com
-- Jay Boice, jayb@huffingtonpost.com
+- Jay Boice, jay.boice@huffingtonpost.com
 
 ## Copyright
 
