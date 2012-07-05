@@ -139,6 +139,7 @@ This response is paginated, with 10 polls per page. To access subsequent pages, 
 
 - Aaron Bycoffe, bycoffe@huffingtonpost.com
 - Jay Boice, jay.boice@huffingtonpost.com
+- Andrei Scheinkman, andrei@huffingtonpost.com
 
 ## Copyright
 
