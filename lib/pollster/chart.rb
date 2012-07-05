@@ -11,8 +11,8 @@ module Pollster
     end
 
     # Get a list of polls for this chart.
-    def polls
-      Poll.where(:chart => self.slug)
+    def polls(params={})
+      Poll.where(params.merge({:chart => self.slug}))
     end
 
     # Get a list of all charts.

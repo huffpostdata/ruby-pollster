@@ -91,7 +91,7 @@ All the charts for a topic or state may be accessed using Pollster::Chart#where:
     >> Pollster::Chart.where(:topic => '2012-senate', :state => 'MA')
     => [<Pollster::Chart: 2012 Massachusetts Senate: Brown vs Warren>]
 
-List the polls that were used to create the estimate for a specific chart:
+List the polls that were used to create the estimate for a specific chart. The list of polls is paginated, with 10 polls per page:
 
     >> chart = Pollster::Chart.find('2012-iowa-gop-primary')
     >> chart.polls
@@ -116,12 +116,11 @@ List the polls that were used to create the estimate for a specific chart:
             :subpopulation=>"Likely Voters",
             :number_of_observations=>729,
             :margin_of_error=>nil},
-           {:choice=>"Romney",
-            :value=>23,
-            :subpopulation=>"Likely Voters",
-            :number_of_observations=>729,
-            :margin_of_error=>nil},
           ...]
+
+Pass a :page parameter to the Chart#polls method to access subsequent pages:
+
+    >> chart.polls(:page => 5)
 
 You may also list all polls available through Pollster:
 
