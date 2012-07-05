@@ -1,0 +1,18 @@
+PATH
+  remote: .
+  specs:
+    pollster (0.1.0)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    json (1.7.3)
+    rdoc (3.12)
+      json (~> 1.4)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  pollster!
+  rdoc
