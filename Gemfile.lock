@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     pollster (0.1.0)
+      json
 
 GEM
   remote: http://rubygems.org/
