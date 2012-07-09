@@ -49,15 +49,19 @@ See the methodology used in recent polls about the Affordable Care Act
 
 ## Usage
 
-Pollster provides two classes:
+Pollster provides three classes:
 
     Pollster::Chart
 
-represents the current estimates for a Pollster chart (e.g. [Romney vs. Obama](http://elections.huffingtonpost.com/pollster/2012-general-election-romney-vs-obama))
+represents the current estimates for a Pollster chart (e.g. [Romney vs. Obama](http://elections.huffingtonpost.com/pollster/2012-general-election-romney-vs-obama)).
 
     Pollster::Poll
 
 represents a specific poll conducted by a polling firm.
+
+    Pollster::Question
+
+represents a question asked as part of a poll.
 
 ### Accessing data
 
