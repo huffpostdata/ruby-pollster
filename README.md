@@ -37,9 +37,9 @@ List charts about Wisconsin
 Calculate the margin between Obama and Romney from a recent general election poll
 
     poll = Poll.where(:chart => '2012-general-election-romney-vs-obama').first
-    question = poll.questions.detect { |question| question[:chart] == '2012-general-election-romney-vs-obama' }[:subpopulations].first
-    obama = question[:responses].detect { |response| response[:choice] == "Obama" }
-    romney = question[:responses].detect { |response| response[:choice] == "Romney" }
+    responses = poll.questions.detect { |question| question.chart == '2012-general-election-romney-vs-obama' }.responses
+    obama = responses.detect { |response| response[:choice] == "Obama" }
+    romney = responses.detect { |response| response[:choice] == "Romney" }
     obama[:value] - romney[:value]
 
 See the methodology used in recent polls about the Affordable Care Act

@@ -33,6 +33,7 @@ module Pollster
         data[:questions] = data[:questions].map { |question| hash_keys_to_sym(question) }
         data[:questions].each { |question| question[:subpopulations] = question[:subpopulations].map { |subpopulation| hash_keys_to_sym(subpopulation) } }
         data[:questions].each { |question| question[:subpopulations].each { |subpopulation| subpopulation[:responses] = subpopulation[:responses].map { |response| hash_keys_to_sym(response) } } }
+        data[:questions] = data[:questions].map { |question| Pollster::Question.new(question) }
         data[:start_date] = Date.parse(data[:start_date])
         data[:end_date] = Date.parse(data[:end_date])
         self.new(data)
