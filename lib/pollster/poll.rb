@@ -11,7 +11,7 @@ module Pollster
     end
 
     # Get a list of all polls.
-    # Polls are listed in pages of 25.
+    # Polls are listed in pages of 10.
     def self.all(params={})
       page = params[:page] || 1
       invoke('polls', {:page => page}).map { |poll| self.create(poll) }
