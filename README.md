@@ -37,7 +37,7 @@ List charts about Wisconsin
 Calculate the margin between Obama and Romney from a recent general election poll
 
     poll = Poll.where(:chart => '2012-general-election-romney-vs-obama').first
-    question = poll.questions.detect { |question| question[:chart] == '2012-general-election-romney-vs-obama' }
+    question = poll.questions.detect { |question| question[:chart] == '2012-general-election-romney-vs-obama' }[:subpopulations].first
     obama = question[:responses].detect { |response| response[:choice] == "Obama" }
     romney = question[:responses].detect { |response| response[:choice] == "Romney" }
     obama[:value] - romney[:value]
@@ -100,32 +100,33 @@ List the polls that were used to create the estimate for a specific chart:
     >> chart = Pollster::Chart.find('2012-iowa-gop-primary')
     >> chart.polls
     => [#<Pollster::Poll:...
-      @end_date=#<Date: 2012-01-01 (4911855/2,0,2299161)>,
-      @id=12385,
-      @method="Automated Phone",
-      @pollster="InsiderAdvantage",
-      @questions=
-       [{:name=>"2012 Iowa GOP Primary",
-         :chart=>"2012-iowa-gop-primary",
-         :topic=>"2012-gop-primary",
-         :state=>"IA",
-         :responses=>
-          [{:choice=>"Undecided",
-            :value=>2,
-            :subpopulation=>"Likely Voters",
-            :number_of_observations=>729,
-            :margin_of_error=>nil},
-           {:choice=>"Bachmann",
-            :value=>6,
-            :subpopulation=>"Likely Voters",
-            :number_of_observations=>729,
-            :margin_of_error=>nil},
-           {:choice=>"Romney",
-            :value=>23,
-            :subpopulation=>"Likely Voters",
-            :number_of_observations=>729,
-            :margin_of_error=>nil},
-          ...]
+        @start_date=#<Date: 2012-01-01 (4911855/2,0,2299161)>>,
+        @end_date=#<Date: 2012-01-01 (4911855/2,0,2299161)>,
+        @id=12385,
+        @method="Automated Phone",
+        @pollster="InsiderAdvantage",
+        @questions=
+         [{:name=>"2012 Iowa GOP Primary",
+           :chart=>"2012-iowa-gop-primary",
+           :topic=>"2012-gop-primary",
+           :state=>"IA",
+           :subpopulations=>
+            [{:name=>"Likely Voters",
+              :observations=>729,
+              :margin_of_error=>nil,
+              :responses=>
+               [{:choice=>"Romney", :value=>23},
+                {:choice=>"Bachmann", :value=>6},
+                {:choice=>"Gingrich", :value=>16},
+                {:choice=>"Huntsman", :value=>2},
+                {:choice=>"Paul", :value=>22},
+                {:choice=>"Perry", :value=>10},
+                {:choice=>"Santorum", :value=>18},
+                {:choice=>"Other", :value=>1},
+                {:choice=>"Undecided", :value=>2}]}]}],
+        @source= "http://www.realclearpolitics.com/docs/2012/InsiderAdvantage_Iowa_0102.pdf",
+        ...]
+
 
 You may also list all polls available through Pollster:
 
