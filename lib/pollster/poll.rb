@@ -2,7 +2,7 @@ module Pollster
 
   class Poll < Base
 
-    attr_reader :start_date, :end_date, :method, :pollster, :url, :source, :questions
+    attr_reader :start_date, :end_date, :method, :pollster, :url, :source, :questions, :survey_houses, :sponsors
 
     def initialize(params={})
       params.each_pair do |k,v|
@@ -36,6 +36,8 @@ module Pollster
         data[:questions] = data[:questions].map { |question| Pollster::Question.new(question) }
         data[:start_date] = Date.parse(data[:start_date])
         data[:end_date] = Date.parse(data[:end_date])
+        data[:survey_houses] = data[:survey_houses].map { |survey_house| hash_keys_to_sym(survey_house) }
+        data[:sponsors] = data[:sponsors].map { |sponsor| hash_keys_to_sym(sponsor) }
         self.new(data)
       end
 
