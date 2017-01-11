@@ -58,10 +58,10 @@ module Pollster
     def self.swagger_types
       {
         :'slug' => :'String',
-        :'start_date' => :'String',
-        :'end_date' => :'String',
-        :'created_at' => :'String',
-        :'updated_at' => :'String',
+        :'start_date' => :'Date',
+        :'end_date' => :'Date',
+        :'created_at' => :'DateTime',
+        :'updated_at' => :'DateTime',
         :'survey_house' => :'String',
         :'mode' => :'String',
         :'url' => :'String',

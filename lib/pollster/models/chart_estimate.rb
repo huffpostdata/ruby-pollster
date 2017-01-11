@@ -37,8 +37,8 @@ module Pollster
     def self.swagger_types
       {
         :'algorithm' => :'String',
-        :'created_at' => :'String',
-        :'datetime' => :'String',
+        :'created_at' => :'DateTime',
+        :'datetime' => :'DateTime',
         :'values' => :'Object',
         :'lowess_parameters' => :'ChartEstimateLowessParameters',
         :'bayesian_kallman_95_percent_intervals' => :'Object'

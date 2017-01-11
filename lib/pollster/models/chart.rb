@@ -41,7 +41,7 @@ module Pollster
       {
         :'slug' => :'String',
         :'url' => :'String',
-        :'created_at' => :'String',
+        :'created_at' => :'DateTime',
         :'tags' => :'Array<String>',
         :'pollster_estimates' => :'Array<ChartEstimate>',
         :'pollster_estimate_summary' => :'ChartPollsterEstimateSummary',

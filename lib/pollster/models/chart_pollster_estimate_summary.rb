@@ -34,10 +34,10 @@ module Pollster
     def self.swagger_types
       {
         :'behind' => :'String',
-        :'datetime' => :'String',
+        :'datetime' => :'DateTime',
         :'ahead' => :'String',
         :'probability' => :'Float',
-        :'created_at' => :'String'
+        :'created_at' => :'DateTime'
       }
     end
 

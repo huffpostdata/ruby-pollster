@@ -51,7 +51,7 @@ module Pollster
         :'charts' => :'Array<String>',
         :'election_date' => :'Date',
         :'n_polls' => :'Integer',
-        :'created_at' => :'String',
+        :'created_at' => :'DateTime',
         :'responses' => :'Array<QuestionResponses>'
       }
     end
