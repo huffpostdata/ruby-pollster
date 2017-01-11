@@ -112,8 +112,7 @@ module Pollster
 
     def initialize
       @scheme = 'http'
-      #@host = 'elections.huffingtonpost.com'
-      @host = 'localhost:3000' # TODO nix me! Just testing.
+      @host = 'elections.huffingtonpost.com'
       @base_path = '/pollster/api/v2'
       @api_key = {}
       @api_key_prefix = {}
