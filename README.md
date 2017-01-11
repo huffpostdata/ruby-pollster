@@ -88,7 +88,16 @@ endpoints and how to paginate.
 
 See https://elections.huffingtonpost.com/pollster/api/v2/help for more details.
 
-See https://app.swaggerhub.com/api/huffpostdata/pollster-api/2.0.0 for full API documentation.
+See https://app.swaggerhub.com/api/huffpostdata/pollster-api/2.0.0 for full API
+documentation. The Ruby-specific warts:
+
+* For the TSV endpoints `questions/{slug}/poll-responses-clean.tsv` and
+  `charts/{slug}/pollster-chart-poll-questions.tsv`, the return values include a
+  `responses` Hash that maps from `label` (String) to `value` (Float).
+* Ruby API method names are snake-cased versions of the API endpoints and end
+  with `_get`. For example, the Ruby method to access
+  `questions/{slug}/poll-responses-clean.tsv` is
+  `api.questions_slug_poll_responses_clean_tsv_get(slug)`.
 
 ## Author
 
