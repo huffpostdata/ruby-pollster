@@ -44,7 +44,7 @@ module Pollster
       header_params = {}
 
       # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/json', 'text/xml']
+      local_header_accept = ['application/json', 'application/xml']
       local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
 
       # HTTP header 'Content-Type'
@@ -101,7 +101,7 @@ module Pollster
       header_params = {}
 
       # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/json', 'text/xml']
+      local_header_accept = ['application/json', 'application/xml']
       local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
 
       # HTTP header 'Content-Type'
@@ -158,7 +158,7 @@ module Pollster
       header_params = {}
 
       # HTTP header 'Accept' (if needed)
-      local_header_accept = ['text/tsv']
+      local_header_accept = ['text/tab-separated-values']
       local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
 
       # HTTP header 'Content-Type'
@@ -215,7 +215,7 @@ module Pollster
       header_params = {}
 
       # HTTP header 'Accept' (if needed)
-      local_header_accept = ['text/tsv']
+      local_header_accept = ['text/tab-separated-values']
       local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
 
       # HTTP header 'Content-Type'
@@ -283,7 +283,7 @@ module Pollster
       header_params = {}
 
       # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/json', 'text/xml']
+      local_header_accept = ['application/json', 'application/xml']
       local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
 
       # HTTP header 'Content-Type'
@@ -340,7 +340,7 @@ module Pollster
       header_params = {}
 
       # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/json', 'text/xml']
+      local_header_accept = ['application/json', 'application/xml']
       local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
 
       # HTTP header 'Content-Type'
@@ -402,7 +402,7 @@ module Pollster
       header_params = {}
 
       # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/json', 'text/xml']
+      local_header_accept = ['application/json', 'application/xml']
       local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
 
       # HTTP header 'Content-Type'
@@ -459,7 +459,7 @@ module Pollster
       header_params = {}
 
       # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/json', 'text/xml']
+      local_header_accept = ['application/json', 'application/xml']
       local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
 
       # HTTP header 'Content-Type'
@@ -516,7 +516,7 @@ module Pollster
       header_params = {}
 
       # HTTP header 'Accept' (if needed)
-      local_header_accept = ['text/tsv']
+      local_header_accept = ['text/tab-separated-values']
       local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
 
       # HTTP header 'Content-Type'
@@ -573,7 +573,7 @@ module Pollster
       header_params = {}
 
       # HTTP header 'Accept' (if needed)
-      local_header_accept = ['text/tsv']
+      local_header_accept = ['text/tab-separated-values']
       local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
 
       # HTTP header 'Content-Type'
@@ -626,7 +626,7 @@ module Pollster
       header_params = {}
 
       # HTTP header 'Accept' (if needed)
-      local_header_accept = ['application/json', 'text/xml']
+      local_header_accept = ['application/json', 'application/xml']
       local_header_accept_result = @api_client.select_header_accept(local_header_accept) and header_params['Accept'] = local_header_accept_result
 
       # HTTP header 'Content-Type'
